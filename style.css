@@ -27,7 +27,7 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #00a651, #007f39);
+  background: linear-gradient(135deg, #080c0a, #007f39);
   border-radius: 8px;
 }
 
@@ -35,10 +35,54 @@ header img {
   width: 120px;
 }
 
-header h1 {
-  font-size: 36px;
-  margin: 10px 0;
+/* Título principal */
+.logo-section h1 {
+  font-size: 5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #00FF4E;
+  margin: 40px 0;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #00FF4E, #00C973);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 10px #0e1410,
+    0 0 20px #0b0f0c,
+    0 0 40px #080e09,
+    0 0 60px #080f0a;
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  
 }
+
+/* Animação de pulsação */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #00FF4E, 0 0 20px #00FF4E;
+  }
+  50% {
+    text-shadow: 0 0 30px #00FF4E, 0 0 60px #00FF4E;
+  }
+  100% {
+    text-shadow: 0 0 10px #00FF4E, 0 0 20px #00FF4E;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 20px #00FF4E, 0 0 40px #00FF4E;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 50px #00FF4E, 0 0 80px #00FF4E;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 20px #00FF4E, 0 0 40px #00FF4E;
+  }
+}
+
 
 header p {
   font-size: 18px;
@@ -68,26 +112,55 @@ section p {
 /* Botões */
 .btn {
   display: inline-block;
-  padding: 15px 35px;
-  font-size: 18px;
+  padding: 18px 40px;
+  font-size: 20px;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  border-radius: 8px;
-  transition: filter 0.3s;
-  margin-top: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
+/* Botão VIP com verde neon */
 .vip-btn {
-  background-color: #28a745;
+  background-color: #00ff99;
+  box-shadow: 0 0 15px #00ff99;
 }
 
+.vip-btn:hover {
+  background-color: #00cc88;
+  box-shadow: 0 0 25px #00ff99;
+  transform: scale(1.05);
+}
+
+/* Botão FREE com azul neon */
 .free-btn {
-  background-color: #007bff;
+  background-color: #00cfff;
+  box-shadow: 0 0 15px #00cfff;
 }
 
-.btn:hover {
-  filter: brightness(1.2);
+.free-btn:hover {
+  background-color: #00aacc;
+  box-shadow: 0 0 25px #00cfff;
+  transform: scale(1.05);
+}
+
+/* Botão YouTube com vermelho neon */
+.youtube-btn {
+  background-color: #ff0040;
+  box-shadow: 0 0 15px #ff0040;
+}
+
+.youtube-btn:hover {
+  background-color: #cc0033;
+  box-shadow: 0 0 25px #ff0040;
+  transform: scale(1.05);
 }
 
 /* Rodapé */
@@ -134,4 +207,131 @@ footer {
   .social-icons img {
     width: 30px;
   }
+  
 }
+body {
+  margin: 0;
+  font-family: 'Arial Black', sans-serif;
+  background: radial-gradient(circle at top center, #001900 0%, #000000 80%);
+  color: white;
+  text-align: center;
+}
+
+/* Cabeçalho */
+header.logo-section {
+  padding: 30px 0;
+}
+
+header img {
+  width: 120px;
+}
+
+header h1 {
+  font-size: 3em;
+  color: red8;
+  margin: 10px 0;
+}
+
+header p {
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Seções */
+section {
+  margin: 40px 0;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #00FF4E;
+}
+
+section p {
+  font-size: 1.1em;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Botões tecnológicos */
+.btn {
+  display: inline-block;
+  padding: 18px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.vip-btn {
+  background-color: #00ff99;
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.vip-btn:hover {
+  background-color: #00cc88;
+  box-shadow: 0 0 25px #00ff99;
+  transform: scale(1.05);
+}
+
+.free-btn {
+  background-color: #00cfff;
+  box-shadow: 0 0 15px #00cfff;
+}
+
+.free-btn:hover {
+  background-color: #00aacc;
+  box-shadow: 0 0 25px #00cfff;
+  transform: scale(1.05);
+}
+
+.youtube-btn {
+  background-color: #ff0040;
+  box-shadow: 0 0 15px #ff0040;
+}
+
+.youtube-btn:hover {
+  background-color: #cc0033;
+  box-shadow: 0 0 25px #ff0040;
+  transform: scale(1.05);
+}
+
+.instagram-btn {
+  background-color: #ff9900;
+  box-shadow: 0 0 15px #ff9900;
+}
+
+.instagram-btn:hover {
+  background-color: #cc7a00;
+  box-shadow: 0 0 25px #ff9900;
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+  padding: 30px 0;
+  background-color: #000;
+}
+
+footer p {
+  font-size: 1.2em;
+  color: #00FF4E;
+  margin-bottom: 10px;
+}
+
+.social-icons img {
+  width: 40px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);}
