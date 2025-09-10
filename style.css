@@ -25,26 +25,30 @@ body {
 
 /* Cabeçalho */
 header {
-  text-align: center;
+  text-align: relati;
   padding: 40px 20px;
   background: linear-gradient(135deg, #080c0a, #007f39);
   border-radius: 8px;
 }
 
+
 header img {
   width: 120px;
+  position: relative;
+  left: -700px;
+  top: 30px;
 }
 
 /* Título principal */
 .logo-section h1 {
-  font-size: 5em;
+  font-size: clamp(32px, 8vw, 80px);
   font-weight: 900;
+  padding-left: 5vw;
   text-transform: uppercase;
   color: #00FF4E;
   margin: 40px 0;
   letter-spacing: 4px;
   background: linear-gradient(90deg, #00FF4E, #00C973);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow:
     0 0 10px #0e1410,
@@ -85,8 +89,36 @@ header img {
 
 
 header p {
-  font-size: 18px;
-  margin-top: 5px;
+font-size: clamp(32px, 8vw, 80px);
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 10px;
+
+}
+/* Navegação */
+nav ul {
+  display: flex;
+  list-style: none;
+  line-height: normal;
+  gap: 4rem;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 254, 254);
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
 }
 
 /* Seções principais */
